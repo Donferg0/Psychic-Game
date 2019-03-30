@@ -13,9 +13,6 @@ document.onkeyup = function (event) {
     if (guessLeft >= 2) {
         var userGuess = event.key;
         var computerGuess = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-        
-        console.log(userGuess);
-        console.log(computerGuess);
 
         if (userGuess === computerGuess) {
         wins++
@@ -27,7 +24,7 @@ document.onkeyup = function (event) {
         winsText.textContent = "Wins: " + wins;
         lossesText.textContent = "Losses: " + losses;
         guessesText.textContent = "Guesses Left: " + guessLeft;
-        guessLeftText.textContent = "Your Guesses so far: " + computerGuess;
+        guessLeftText.textContent = "Your Guesses so far: " + computerGuess ;
 
     }
     else {
