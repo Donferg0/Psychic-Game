@@ -21,12 +21,7 @@ document.onkeyup = function (event) {
         guessLeft--
         }
 
-        winsText.textContent = "Wins: " + wins;
-        lossesText.textContent = "Losses: " + losses;
-        guessesText.textContent = "Guesses Left: " + guessLeft;
-        guessLeftText.textContent = "Your Guesses so far: " + computerGuess ;
-
-    }
+        }
     else {
         losses++
         guessLeft = 9
