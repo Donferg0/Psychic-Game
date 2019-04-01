@@ -1,6 +1,7 @@
 var wins = 0
 var losses = 0
 var guessLeft = 9
+var guessesSoFar = [];
 
 var userGuessText = document.getElementById("userGuess")
 var winsText = document.getElementById("wins")
@@ -19,17 +20,19 @@ document.onkeyup = function (event) {
         guessLeft = 9
         } else {
         guessLeft--
+        guessesSoFar.push(userGuess)
         }
 
         }
     else {
         losses++
         guessLeft = 9
+
     
     }
         winsText.textContent = "Wins: " + wins;
         lossesText.textContent = "Losses: " + losses;
         guessesText.textContent = "Guesses Left: " + guessLeft;
-        guessLeftText.textContent = "Your Guesses so far: " + computerGuess ;
+        guessLeftText.textContent = "Your Guesses so far: " + guessesSoFar ;
 
 }
