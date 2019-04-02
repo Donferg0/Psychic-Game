@@ -11,22 +11,26 @@ var guessLeftText = document.getElementById("guessLeft")
 
 
 document.onkeyup = function (event) {
-    if (guessLeft >= 2) {
+
         var userGuess = event.key;
         var computerGuess = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    
+        if (guessLeft > 1) {
 
-        if (userGuess === computerGuess) {
-        wins++
-        guessLeft = 9
-        } else {
-        guessLeft--
-        guessesSoFar.push(userGuess)
-        }
+            if (userGuess === computerGuess) {
+            wins++
+            guessLeft = 9
+            guessesSoFar = []
+            } else {
+            guessLeft--
+            guessesSoFar.push(userGuess)
+            }
 
         }
     else {
         losses++
         guessLeft = 9
+        guessesSoFar = []
 
     
     }
